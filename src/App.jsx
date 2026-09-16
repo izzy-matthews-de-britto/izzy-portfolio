@@ -54,9 +54,9 @@ function App() {
             <p className="hello">Hello, I'm Izzy 👋</p>
 
             <h1>
-              Software
+              
               <br />
-              <span>Engineering Student</span>
+              <span>Software Engineering Student</span>
             </h1>
 
             <p className="hero-description">

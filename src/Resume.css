@@ -1,0 +1,842 @@
+/* ======================================
+   RESUME PAGE
+====================================== */
+
+.resumePage {
+  --r-bg: #0b0b10;
+  --r-surface: #121218;
+  --r-surface-hover: #17171f;
+  --r-text: #f7f5fa;
+  --r-muted: #9c98a5;
+  --r-purple: #aa3bff;
+  --r-purple-light: #d3a0ff;
+  --r-border: rgba(255, 255, 255, 0.1);
+
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(170, 59, 255, 0.14),
+      transparent 450px
+    ),
+    var(--r-bg);
+
+  color: var(--r-text);
+
+  text-align: left;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* Prevent global CSS from interfering */
+
+.resumePage *,
+.resumePage *::before,
+.resumePage *::after {
+  box-sizing: border-box;
+}
+
+.resumePage h1,
+.resumePage h2,
+.resumePage h3,
+.resumePage p {
+  font-family: inherit;
+}
+
+.resumePage h1,
+.resumePage h2,
+.resumePage h3 {
+  color: var(--r-text);
+}
+
+
+/* ======================================
+   NAV
+====================================== */
+
+.resumeNav {
+  width: min(1080px, calc(100% - 60px));
+  height: 80px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--r-border);
+}
+
+
+.resumeBrand {
+  color: var(--r-text);
+
+  font-size: 19px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.resumeBrand span {
+  color: var(--r-purple);
+}
+
+
+.portfolioLink {
+  color: var(--r-muted);
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.portfolioLink:hover {
+  color: var(--r-purple-light);
+}
+
+
+/* ======================================
+   MAIN
+====================================== */
+
+.resumeMain {
+  width: min(920px, calc(100% - 60px));
+
+  margin: 0 auto;
+}
+
+
+/* ======================================
+   HERO
+====================================== */
+
+.resumeHero {
+  padding: 110px 0 90px;
+}
+
+
+.resumeLabel {
+  margin: 0 0 25px !important;
+
+  color: var(--r-purple-light) !important;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.resumePage .resumeName {
+  display: block;
+
+  margin: 0 !important;
+
+  color: var(--r-text) !important;
+
+  font-size: clamp(55px, 8vw, 90px) !important;
+
+  font-weight: 750 !important;
+
+  line-height: 0.94 !important;
+
+  letter-spacing: -5px !important;
+
+  text-align: left !important;
+}
+
+
+.resumePage .resumeName span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: var(--r-purple-light) !important;
+}
+
+
+.resumeRole {
+  margin: 32px 0 0 !important;
+
+  color: var(--r-purple-light) !important;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+.resumeSummary {
+  max-width: 690px;
+
+  margin: 25px 0 0 !important;
+
+  color: var(--r-muted) !important;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* ======================================
+   BUTTONS
+====================================== */
+
+.resumeButtons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 38px;
+}
+
+
+.downloadButton,
+.contactButton {
+  min-height: 50px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.downloadButton {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #aa3bff,
+      #7c3aed
+    );
+
+  box-shadow:
+    0 10px 35px
+    rgba(170, 59, 255, 0.2);
+}
+
+
+.downloadButton:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(170, 59, 255, 0.3);
+}
+
+
+.contactButton {
+  color: var(--r-text);
+
+  border:
+    1px solid var(--r-border);
+
+  background:
+    rgba(255, 255, 255, 0.03);
+}
+
+
+.contactButton:hover {
+  transform: translateY(-3px);
+
+  background:
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* ======================================
+   CONTACT
+====================================== */
+
+.contactGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  border-top:
+    1px solid var(--r-border);
+
+  border-bottom:
+    1px solid var(--r-border);
+}
+
+
+.contactGrid > div {
+  padding: 25px;
+}
+
+
+.contactGrid > div:first-child {
+  padding-left: 0;
+}
+
+
+.contactGrid > div + div {
+  border-left:
+    1px solid var(--r-border);
+}
+
+
+.contactGrid p {
+  margin: 0 0 8px !important;
+
+  color: var(--r-muted) !important;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+.contactGrid a,
+.contactGrid span {
+  color: var(--r-text);
+
+  font-size: 13px;
+
+  text-decoration: none;
+}
+
+
+/* ======================================
+   SECTIONS
+====================================== */
+
+.resumeSection {
+  padding: 95px 0;
+
+  border-bottom:
+    1px solid var(--r-border);
+}
+
+
+.sectionHeading {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  margin-bottom: 50px;
+}
+
+
+.sectionHeading > span {
+  padding-top: 4px;
+
+  color: var(--r-purple);
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+.sectionHeading p {
+  margin: 0 0 7px !important;
+
+  color:
+    var(--r-purple-light) !important;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.resumePage .sectionHeading h2 {
+  margin: 0 !important;
+
+  color: var(--r-text) !important;
+
+  font-size: 35px !important;
+
+  font-weight: 650 !important;
+
+  line-height: 1.1 !important;
+
+  letter-spacing: -1.5px !important;
+}
+
+
+/* ======================================
+   EXPERIENCE
+====================================== */
+
+.experienceList {
+  margin-left: 45px;
+}
+
+
+.experience {
+  display: grid;
+
+  grid-template-columns: 140px 1fr;
+
+  gap: 35px;
+
+  padding: 40px 0;
+
+  border-top:
+    1px solid var(--r-border);
+}
+
+
+.experience:last-child {
+  border-bottom:
+    1px solid var(--r-border);
+}
+
+
+.date {
+  padding-top: 5px;
+
+  color: var(--r-muted);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+
+.company {
+  margin: 0 0 7px !important;
+
+  color:
+    var(--r-purple-light) !important;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.resumePage .experienceContent h3 {
+  margin: 0 0 18px !important;
+
+  color: var(--r-text) !important;
+
+  font-size: 23px;
+
+  font-weight: 650;
+
+  letter-spacing: -0.5px;
+}
+
+
+.description {
+  max-width: 600px;
+
+  margin: 0 0 14px !important;
+
+  color: var(--r-muted) !important;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* ======================================
+   EDUCATION
+====================================== */
+
+.educationGrid {
+  margin-left: 45px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+.educationCard {
+  min-height: 240px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  border:
+    1px solid var(--r-border);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.045),
+      rgba(255,255,255,0.015)
+    );
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.educationCard:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(170, 59, 255, 0.45);
+}
+
+
+.year {
+  margin: 0 0 14px !important;
+
+  color:
+    var(--r-purple-light) !important;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.resumePage .educationCard h3 {
+  margin: 0 0 12px !important;
+
+  color: var(--r-text) !important;
+
+  font-size: 19px;
+
+  font-weight: 650;
+
+  line-height: 1.35;
+}
+
+
+.school {
+  margin: 0 !important;
+
+  color: var(--r-muted) !important;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* ======================================
+   SKILLS
+====================================== */
+
+.skillsGrid {
+  margin-left: 45px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+.skillsGrid div {
+  padding: 18px 20px;
+
+  color: #ded9e3;
+
+  font-size: 13px;
+
+  border:
+    1px solid var(--r-border);
+
+  border-radius: 8px;
+
+  background:
+    rgba(255,255,255,0.025);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.skillsGrid div:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(170,59,255,0.4);
+}
+
+
+/* ======================================
+   LANGUAGES
+====================================== */
+
+.languagesGrid {
+  margin-left: 45px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+
+.languageCard {
+  padding: 23px;
+
+  border:
+    1px solid var(--r-border);
+
+  border-radius: 9px;
+
+  background:
+    rgba(255,255,255,0.025);
+}
+
+
+.languageCard span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--r-text);
+
+  font-size: 14px;
+
+  font-weight: 650;
+}
+
+
+.languageCard p {
+  margin: 0 !important;
+
+  color:
+    var(--r-purple-light) !important;
+
+  font-size: 12px;
+}
+
+
+/* ======================================
+   BOTTOM
+====================================== */
+
+.resumeBottom {
+  padding: 120px 0;
+
+  text-align: center;
+}
+
+
+.resumeBottom > p {
+  margin: 0 0 15px !important;
+
+  color:
+    var(--r-purple-light) !important;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.resumePage .resumeBottom h2 {
+  margin: 0 0 35px !important;
+
+  color: var(--r-text) !important;
+
+  font-size:
+    clamp(35px, 5vw, 50px) !important;
+
+  font-weight: 650 !important;
+
+  letter-spacing: -2px !important;
+}
+
+
+/* ======================================
+   FOOTER
+====================================== */
+
+.resumeFooter {
+  width:
+    min(1080px, calc(100% - 60px));
+
+  margin: 0 auto;
+
+  padding: 28px 0 35px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top:
+    1px solid var(--r-border);
+}
+
+
+.resumeFooter p,
+.resumeFooter a {
+  margin: 0 !important;
+
+  color: var(--r-muted) !important;
+
+  font-size: 11px;
+
+  text-decoration: none;
+}
+
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 700px) {
+
+  .resumeNav,
+  .resumeMain,
+  .resumeFooter {
+    width: calc(100% - 32px);
+  }
+
+
+  .resumeNav {
+    height: 70px;
+  }
+
+
+  .resumeHero {
+    padding: 80px 0 70px;
+  }
+
+
+  .resumePage .resumeName {
+    font-size:
+      clamp(46px, 15vw, 65px) !important;
+
+    letter-spacing:
+      -3px !important;
+  }
+
+
+  .resumeSummary {
+    font-size: 14px;
+  }
+
+
+  .resumeButtons {
+    flex-direction: column;
+  }
+
+
+  .downloadButton,
+  .contactButton {
+    width: 100%;
+  }
+
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .contactGrid > div {
+    padding: 18px 0;
+  }
+
+
+  .contactGrid > div + div {
+    border-left: none;
+
+    border-top:
+      1px solid var(--r-border);
+  }
+
+
+  .resumeSection {
+    padding: 70px 0;
+  }
+
+
+  .experienceList,
+  .educationGrid,
+  .skillsGrid,
+  .languagesGrid {
+    margin-left: 0;
+  }
+
+
+  .experience {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .educationGrid,
+  .skillsGrid,
+  .languagesGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .resumeFooter {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+}
